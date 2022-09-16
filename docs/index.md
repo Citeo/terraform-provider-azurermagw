@@ -14,11 +14,15 @@ The followings are the main 2 advantages of our azurermagw provider compared to 
 * From another side, when using the current azurerm provider (version 3.x) for an application gateway resource, a very simple change in the terraform configuration of the app gateway project (or in the portal) makes the terraform plan or apply very hard to read. Several persons observed the same experience and waited for a coming soon azurerm provider that never come. 
 
 To overcome the readability problem of modified terraform configurations, the go terraform framework type MapNestedAttributes was used to declare several http listeners and request routing rules instead of ListNestedAttributes or SetNestedAttributes. These last types, after experiencing them, were responsible of the readability problem. That’s why we use a map with keys to declare listeners and rules. See the binding service example usage for more details
-~> **NOTE:**: A different key name has to be set for each listener or rule. It’s of your responsibility the check that the listener or rule keys are all different. 
-~> **NOTE:**: Once applied, the key name change is not supported. 
 
--> **Note:**: The current provider version support only one instance of the following attributes: backend pool, backend http settings, probe, redirect configuration and ssl certificate. This could be enhanced in future release if required.
--> **Note:**: The current provider version support the ssl certificate to be stored in a key vault. This could be enhanced in future release if required.
+~> **NOTE:** A different key name has to be set for each listener or rule. It’s of your responsibility the check that the listener or rule keys are all different. 
+
+~> **NOTE:** Once applied, the key name change is not supported. 
+
+-> **Note:** The current provider version support only one instance of the following attributes: backend pool, backend http settings, probe, redirect configuration and ssl certificate. This could be enhanced in future release if required.
+
+-> **Note:** The current provider version support the ssl certificate to be stored in a key vault. This could be enhanced in future release if required.
+
 
 # Authentication
 The provider interact with azure cloud through API calls. Indeed, an authentication needs to be done to allow this interaction.
