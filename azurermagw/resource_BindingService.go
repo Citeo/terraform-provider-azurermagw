@@ -40,7 +40,7 @@ func (r resourceBindingServiceType) GetSchema(_ context.Context) (tfsdk.Schema, 
 			"application_gateway_name": {
 				Type:     types.StringType,
 				Required: true,
-				MarkdownDescription: "The name of the application gateway to which the backend application will be binded.",
+				MarkdownDescription: "The name of the application gateway to which the backend application will be bound.",
 			},
 			"application_gateway_resource_group_name": {
 				Type:     types.StringType,
