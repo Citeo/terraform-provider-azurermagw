@@ -17,6 +17,8 @@ To overcome the readability problem of modified terraform configurations, the go
 
 -> **Note:** The current provider version support the ssl certificate to be stored in a key vault. This could be enhanced in future release if required.
 
+~> **NOTE:** Actuellay, this provider is deployed in dev and test environments before moving to production.
+
 # Authentication
 The provider interact with azure cloud through API calls. Indeed, an authentication needs to be done to allow this interaction.
 Two authentication methods are supported till now.
